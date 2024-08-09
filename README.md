@@ -32,7 +32,7 @@ PrashnaPravah enables administrators to create and manage quizzes while allowing
 <i><h2>6) Edit Exam by Admin </h2></i>
 <img src="https://github.com/whoadarshkumar/PrashnaPravah/blob/main/images/edit_exam.png"/>
 <i><h2>7) Edit Que by Admin </h2></i>
-<img src="https://github.com/whoadarshkumar/PrashnaPravah/blob/main/images/edit_exam.png"/>
+<img src="https://github.com/whoadarshkumar/PrashnaPravah/blob/main/images/admin_exam_ques.png"/>
 <i><h2>8) User's Profile </h2></i>
 <img src="https://github.com/whoadarshkumar/PrashnaPravah/blob/main/images/user_home.png"/>
 <i><h2>9) Instructions before exam </h2></i>

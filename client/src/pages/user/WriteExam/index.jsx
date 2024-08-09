@@ -21,6 +21,7 @@ function WriteExam() {
   const [timeUp, setTimeUp] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
   const { user } = useSelector((state) => state.users);
+
   const getExamData = async () => {
     try {
       dispatch(ShowLoading());
@@ -84,7 +85,7 @@ function WriteExam() {
   };
 
   const startTimer = () => {
-    let totalSeconds = examData.duration;
+    let totalSeconds = examData.duration*60;
     const intervalId = setInterval(() => {
       if (totalSeconds > 0) {
         totalSeconds = totalSeconds - 1;
@@ -131,10 +132,16 @@ function WriteExam() {
                 {questions[selectedQuestionIndex].name}
               </h1>
 
-              <div className="timer">
-                <span className="text-2xl">{secondsLeft}</span>
-              </div>
+              <div className="timer-box">
+  <div className="time">
+    {Math.floor(secondsLeft / 60)} Minutes {secondsLeft % 60} Seconds
+  </div>
+</div>
+
+              
             </div>
+
+            
 
             <div className="flex flex-col gap-2">
               {Object.keys(questions[selectedQuestionIndex].options).map(
@@ -227,7 +234,7 @@ function WriteExam() {
                       setView("instructions");
                       setSelectedQuestionIndex(0);
                       setSelectedOptions({});
-                      setSecondsLeft(examData.duration);
+                      setSecondsLeft(examData.duration*60);
                     }}
                   >
                     Retake Exam

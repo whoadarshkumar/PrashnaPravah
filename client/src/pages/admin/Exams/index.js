@@ -51,7 +51,7 @@ function Exams() {
       dataIndex: "name",
     },
     {
-      title: "Duration",
+      title: "Duration(in Minutes)",
       dataIndex: "duration",
     },
     {

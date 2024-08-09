@@ -6,6 +6,7 @@ import { HideLoading, ShowLoading } from "../../../redux/loaderSlice";
 import { getAllReports } from "../../../apicalls/reports";
 import { useEffect } from "react";
 import moment from "moment";
+import { render } from "react-dom";
 
 function AdminReports() {
   const [reportsData, setReportsData] = React.useState([]);
@@ -41,6 +42,11 @@ function AdminReports() {
       title: "Passing Marks",
       dataIndex: "correctAnswers",
       render: (text, record) => <>{record.exam.passingMarks}</>,
+    },
+    {
+      title: "Duration(in Minutes)",
+      dataIndex:"0",
+      render: (text, record) => <>{record.exam.duration}</>,
     },
     {
       title: "Obtained Marks",
